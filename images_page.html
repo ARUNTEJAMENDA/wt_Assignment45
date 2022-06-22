@@ -1,0 +1,78 @@
+<!--
+    3 images in 3 rows
+    caption in each image + background-color, border, padding, margin
+    on hover display image description
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images_Hover:description</title>
+    <style>
+        body{
+            height:100vh;
+            width:100vw;
+            /*  */
+            margin:0;
+            padding:0;
+            /*  */
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            /*  */
+            font-family:cursive;
+            text-transform: capitalize;
+        }
+        .d{
+            height:0;
+            overflow:hidden;
+            transition: 0.2s;
+        }
+        img{
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.303);
+        }
+        .x{
+            width:23vw;
+            /*  */
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* */
+            border-radius: 20px;
+            padding:10px;
+            background: rgba(128, 128, 128, 0.048);
+            border: 2px solid rgba(0, 0, 0, 0.068);
+            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.13);
+            transition: 0.2s;
+        }
+        .x:hover{
+            border-radius: 20px;
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.13);
+        }
+        .x:hover .d{
+            height:max-content;
+            padding:10px;
+            text-align: justify;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1" class="x">
+        <img src="1.png" width="300" alt="1">
+        <div id="description1" class="d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident commodi similique neque molestias assumenda dicta, mollitia quis ullam repellendus animi, ab debitis porro voluptas vitae maiores veritatis, expedita obcaecati.</div>
+    </div>
+    <div id="d2" class="x">
+        <img src="2.png" alt="2" width="300">
+        <div id="description2" class="d">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum minima molestiae, placeat exercitationem quasi ullam corporis obcaecati in eligendi animi velit distinctio recusandae aperiam illo neque beatae voluptate nesciunt aliquid?</div>
+    </div>
+    <div id="d3" class="x">
+        <img src="3.png" alt="3" width="300">
+        <div id="description3" class="d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci quasi, asperiores blanditiis sed dolorum! Molestias illo cum, harum similique consequuntur sapiente optio rerum, impedit reprehenderit qui, earum maiores obcaecati.</div>
+    </div>
+</body>
+</html>

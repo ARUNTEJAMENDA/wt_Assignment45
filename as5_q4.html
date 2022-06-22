@@ -1,0 +1,142 @@
+<!--
+Create a sample page that has the following tables:
+    1. the table with no style code
+    2. the box table
+    3. horizontal zebra
+    4. vertical zebra
+    5. one column emphasis
+    6. background image
+    7. Create a Form which has style added to the form tags and the table tags which hold the form.
+    7.1. Colorize the input areas where visitors enter information, style the submit button,
+        and the text that display on the form.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WT_as5_q4</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            height:100vh;
+            width:100vw;
+            display:grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-evenly;
+            align-items: center;
+            /*  */
+            background: url(".dist/as5_q.png");
+            background-size: 5vh;
+        }
+        table{
+            background: white;
+        }
+        caption{
+            background:white;
+            border:1px solid black;
+            padding:5px;
+        }
+        #hzebra tr:nth-child(n){
+            background: rgba(0, 0, 0, 0.018);
+            color:rgb(0, 0, 0);
+        }
+        #hzebra tr:nth-child(2n+1){
+            background: black;
+            color:white;
+        }
+        #vzebra td:nth-child(2n+1),#vzebra th:nth-child(2n+1){
+            background: black;
+            color:white;
+        }
+        #hzebra th,#vzebra th,#hzebra td,#vzebra td,#emph td,#emph th,#back td,#back th,#form td,#form th{
+            padding:5px;
+            text-align:center;
+        }
+        #emph th{
+            background: rgb(198, 255, 196);
+        }
+        #emph td:hover{
+            border:2px solid red;
+        }
+        #back{
+            background: url("3.png");
+            background-size: cover;
+        }
+        input{
+            cursor: pointer;
+            border: 2px solid rgba(128, 128, 128, 0.178);
+            border-radius: 5px;
+            height:30px;
+            text-align: center;
+            /*  */
+            font-size: 15px;
+        }
+        #uid:focus,#pass:focus{
+            outline: none;
+            border-right:2px solid red;
+            color: rgb(255, 0, 85);
+            background: rgb(156, 255, 234);
+            letter-spacing: 2px;
+        }
+        #submit,#reset{
+            border:2px solid greenyellow;
+            padding:5px;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+        #submit:hover,#reset:hover{
+            background: greenyellow;
+            border:2px solid rgba(48, 248, 255, 0.212);
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr><td colspan="3">TABLE WITH NO STYLE</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+        <tr><td>4</td><td>5</td><td>6</td></tr>
+        <tr><td>7</td><td>8</td><td>9</td></tr>
+        <caption title="table"><h5>TABLE WITH NO STYLE</h5></caption>
+    </table>
+    <table id="hzebra" rules="all" border="1">
+        <tr><th>Sno</th><th>Col1</th><th>Col2</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+        <tr><td>4</td><td>5</td><td>6</td></tr>
+        <tr><td>7</td><td>8</td><td>9</td></tr>
+        <caption title="table"><h5>Horizontal-Zebra</h5></caption>
+    </table>
+    <table id="vzebra" rules="all" border="1">
+        <tr><th>Sno</th><th>Col1</th><th>Col2</th><th>Col3</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>0</td></tr>
+        <tr><td>4</td><td>5</td><td>6</td><td>x</td></tr>
+        <tr><td>7</td><td>8</td><td>9</td><td>y</td></tr>
+        <caption title="table"><h5>Vertical-Zebra</h5></caption>
+    </table>
+    <table id="emph" rules="all" border="1">
+        <tr><th>Sno</th><th>Col1</th><th>Col2</th><th>Col3</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>0</td></tr>
+        <tr><td>4</td><td>5</td><td>6</td><td>x</td></tr>
+        <tr><td>7</td><td>8</td><td>9</td><td>y</td></tr>
+        <caption title="table"><h5>Column-Emphasis</h5></caption>
+    </table>
+    <table id="back" rules="all" border="1">
+        <tr><th>Sno</th><th>Col1</th><th>Col2</th><th>Col3</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>0</td></tr>
+        <tr><td>4</td><td>5</td><td>6</td><td>x</td></tr>
+        <tr><td>7</td><td>8</td><td>9</td><td>y</td></tr>
+        <caption title="table"><h5>Table with Background-image</h5></caption>
+    </table>
+    <table id="form" rules="all" border="1">
+        <tr bgcolor="khaki"><td colspan="2">Form For Login</td></tr>
+        <tr><td colspan="2"><label for="uid">User-id: </label><input type="text" name="uid" id="uid" placeholder="Userid" autofocus></td></tr>
+        <tr><td colspan="2"><label for="pass">Password: </label><input type="text" name="pass" id="pass" placeholder="Password"></td></tr>
+        <tr><td><input id="submit" type="submit" value="Submit"></td><td><input id="reset" type="reset" value="Reset"></td></tr>
+        <caption title="table"><h5>Form For login</h5></caption>
+    </table>
+</body>
+</html>

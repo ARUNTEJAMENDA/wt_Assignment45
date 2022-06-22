@@ -1,0 +1,83 @@
+<!--
+    Create a sample page that has a list which is converted to horizontal navigation [5 pts]
+    Create a page with 3 links that display an image in the background that has 4 states (link, visited, hover, active).
+    Create a sample page that has main navigation that displays horizontally and then has drop down navigation, pop out navigation, and second level pop out navigation. (for a total of 4 levels of navigation).
+    Create vertical pop out navigation.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WT_as5_q4</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            height: 100vh;
+            width:100vw;
+        }
+        nav{
+            height:20%;
+            border:1px solid black;
+            /*  */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #n1u{
+            width:100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #n1u li{
+            display: inline;
+        }
+        #n4{
+            background: url("2.png");
+            /*  */
+            display: flex;
+            flex-direction: row;
+        }
+        #n4 ul{
+            width:100%;
+            display: none;
+        }
+        #n4:hover ul{
+            display: inline-flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body vlink="red" alink="green">
+    <nav id="n1"><ul id="n1u"><li><a href="#"> Link - 1</a></li><li><a href="#"> Link - 2</a></li><li><a href="#"> Link - 3</a></li><li><a href="#"> Link - 4</a></li></ul></nav>
+    <nav id="n2">
+        <ul id="n2u">
+            <li><a href="#"> Link - 1</a></li>
+            <li><a href="#"> Link - 2</a></li>
+            <li><a href="#"> Link - 3</a></li>
+            <li><a href="#"> Link - 4</a></li>
+        </ul>
+    </nav>
+    <nav id="n3">
+        <select id="n3u">
+            <option> Link - 1</option>
+            <option> Link - 2</option>
+            <option> Link - 3</option>
+            <option> Link - 4</option>
+        </select>
+    </nav>
+    <nav id="n4">
+        <!-- <img id="hnav" src="2.png" height="30" width="30" alt="nav"/> -->
+        <ul id="n4u">
+            <li><a href="#"> Link - 1</a></li>
+            <li><a href="#"> Link - 2</a></li>
+            <li><a href="#"> Link - 3</a></li>
+            <li><a href="#"> Link - 4</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

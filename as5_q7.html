@@ -1,0 +1,119 @@
+<!--
+    Create your own responsive web site using Media Query.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WT_as5_q7</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            border:none;
+            font-family: monospace;
+        }
+        *:focus{
+            outline: none;
+            border-right: 2px solid red;
+        }
+        html{
+            height:100vh;
+        }
+        main{
+            height:60vh;
+            width:100%;
+        }
+        section{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #blocks{
+            height:150px;
+            width:150px;
+            border-radius: 20px;
+            background:rgb(82, 255, 82);
+            border: 2px solid rgba(128, 128, 128, 0.137);
+        }
+        footer{
+            padding: 5%;
+            text-align: center;
+        }
+        ul{
+            list-style: square;
+        }
+        #sidenav{
+            background:rgb(255, 143, 143);width:10%;position:fixed;top:40%;left:0%;border-radius: 0 10px 10px 0;padding:10px;
+        }
+        @media screen and (max-width:700px) {
+            main{
+                height:unset;
+            }
+            section{
+                height:80vh !important;
+                flex-direction: column;
+                border-bottom: 2px solid rgba(128, 128, 128, 0.158);
+            }
+            #sidenav li{
+                display: none;
+            }
+            #sidenav{
+                height:5vw;
+                width:5vw;
+            }
+            #sidenav:hover{
+                height:unset;
+                width:unset;
+            }
+            #sidenav:hover li{
+                display: flex;
+            }
+            nav h1{
+                display: flex;
+                height:100%;
+                justify-content: center;
+                align-items: center;
+                padding:0 !important;
+                font-size: 6vw !important;
+            }
+        }
+    </style>
+ </head>
+ <body>
+    <header id="header" style="padding:1% 0 0 0;height:100vh;width:100%;background:rgba(255, 192, 203, 0.26);">
+        <nav  id="nav" style="margin:auto;height:25%;width:80%;background: rgba(120, 255, 120, 0.719);border-radius:15px;">
+            <h1  id="h1" style="padding:5%;color:white;font-size:3vw;">
+                >> ARUNTEJAMENDA
+            </h1>
+        </nav>
+        <ul id="sidenav">
+            <li><strong>Semantic Tags Used:</strong></li>
+            <li>> <a href="#header">Header</a></li>
+            <li>> <a href="#footer">Footer</a></li>
+            <li>> <a href="#nav">Nav</a></li>
+            <li>> <a href="#main">Main</a></li>
+            <li>> <a href="#section1">Section-1</a></li>
+            <li>> <a href="#section2">Section-2</a></li>
+        </ul>
+    </header>
+    <main  id="main" >
+        <section  id="section1" style="height:30vh;color:#ffff96b2;">
+            <div id="blocks"></div>
+            <div id="blocks"></div>
+            <div id="blocks"></div>
+        </section>
+        <section  id="section2" style="height:30vh;color:#ff96fab2;">
+            <div id="blocks"></div>
+            <div id="blocks"></div>
+            <div id="blocks"></div>
+        </section>
+    </main>
+    <footer id="footer" style="background:rgb(0, 0, 83);color:white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        MAde with Hurry...!! By ❤_ATM_❤
+    </footer>
+</body>
+</html>
